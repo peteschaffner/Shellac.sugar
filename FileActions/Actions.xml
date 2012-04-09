@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<action-recipes>
+
+	<action id="com.peteschaffner.sugar.shellac.open-terminal-here" category="shellac.root">
+		<class>OCShellAction</class>
+		<key-equivalent>cmd shift o</key-equivalent>
+		<setup>
+			<script>open-terminal-here.sh</script>
+			<output>nothing</output>
+		</setup>
+	</action>
+
+	<action id="com.peteschaffner.sugar.shellac.run-in-terminal"  category="shellac.root">
+		<class>OCShellAction</class>
+		<key-equivalent>cmd r</key-equivalent>
+		<setup>
+			<script>run-in-terminal.sh</script>
+			<output>console</output>
+		</setup>
+	</action>
+	
+	<action id="com.peteschaffner.sugar.shellac.open-in-chocolat" category="shellac.root">
+		<class>OCShellAction</class>
+		<key-equivalent>cmd shift c</key-equivalent>
+		<setup>
+			<script>open-in-chocolat.sh</script>
+			<output>nothing</output>
+		</setup>
+	</action>
+	
+</action-recipes>
