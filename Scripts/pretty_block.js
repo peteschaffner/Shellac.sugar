@@ -8,6 +8,8 @@ action.canPerformWithContext = function (context, outError) {
 	// Find the character to the left of our cursor
 	var prevChar = context.substringWithRange(new Range(range.location - 1, 1));
 	
+	console.log('hi from pretty-block');
+	
 	return prevChar === action.setup.character;
 };
 

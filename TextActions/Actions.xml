@@ -3,7 +3,7 @@
 	
 	<!-- Format blocks automatically (like TextMate and Chocolat) -->
 	<action id="com.peteschaffner.sugar.shellac.pretty-block.brace.curly" category="hidden">
-		<script>pretty-block.js</script>
+		<script>pretty_block.js</script>
 		<text-trigger key-equivalent="enter"></text-trigger>
 		<syntax-context>js punctuation.brace.curly.close</syntax-context>
 		<setup>
@@ -12,7 +12,7 @@
 	</action>
 	
 	<action id="com.peteschaffner.sugar.shellac.pretty-block.brace.square" category="hidden">
-		<script>pretty-block.js</script>
+		<script>pretty_block.js</script>
 		<text-trigger key-equivalent="enter"></text-trigger>
 		<syntax-context>js punctuation.brace.square.close</syntax-context>
 		<setup>
@@ -20,22 +20,33 @@
 		</setup>
 	</action>
 	
-	<!-- Auto wrap or auto pair braces -->
-	<action id="com.peteschaffner.sugar.shellac.auto-wrap.brace.round" category="hidden">
-		<script>auto-wrap.rb</script>
-		<text-trigger key-equivalent="("></text-trigger>
-		<setup>
-			<character>(</character>
-		</setup>
+	<!--Quickly cycle through different color strings (Hex/RGB/RGBA/HSL/HSLA)-->
+	<action id="com.peteschaffner.sugar.shellac.convert-color" category="shellac.actions.text">
+		<script>convert_color.js</script>
+		<key-equivalent>option cmd j</key-equivalent>
 	</action>
 	
-	<action id="com.peteschaffner.sugar.shellac.no-dupes.brace.round" category="hidden">
+	<!--TODO: on hold for fix-->
+	<!-- Auto wrap or auto pair braces -->
+	<!--<action id="com.peteschaffner.sugar.shellac.auto-wrap.brace.round" category="hidden">
+		<class>OCShellAction</class>
+		<text-trigger key-equivalent="("></text-trigger>
+		<setup>
+			<script>auto-wrap.rb</script>
+			<input>selection</input>
+			<output>console</output>
+			<!--debugging--*>
+			<suppress-errors>false</suppress-errors>
+		</setup>
+	</action>-->
+	
+	<!--<action id="com.peteschaffner.sugar.shellac.no-dupes.brace.round" category="hidden">
 		<script>no-dupes.js</script>
 		<text-trigger key-equivalent=")"></text-trigger>
 		<syntax-context>js punctuation.brace.round.close</syntax-context>
 		<setup>
 			<character>)</character>
 		</setup>
-	</action>
+	</action>-->
 	
 </action-recipes>

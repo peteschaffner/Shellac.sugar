@@ -1,5 +1,8 @@
-"shellac.root.title" = "Shellac";
+"shellac.actions.file.title" = "Shellac";
 
 "com.peteschaffner.sugar.shellac.open-terminal-here.title" = "Open Terminal Here";
 "com.peteschaffner.sugar.shellac.open-in-chocolat.title" = "Open File in Chocolat";
 "com.peteschaffner.sugar.shellac.run-in-terminal.title" = "Run";
+
+"shellac.actions.text.title" = "Shellac";
+"com.peteschaffner.sugar.shellac.convert-color.title" = "Change Color Format";
