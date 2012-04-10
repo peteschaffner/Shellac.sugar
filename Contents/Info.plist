@@ -9,10 +9,18 @@
 	<string>com.peteschaffner.sugar.shellac</string>
 	<key>CFBundleVersion</key>
 	<string>0.5.0</string>
+	<key>MREspressoMinVersion</key>
+	<string>2.0.0</string>
+	<key>MRSugarDependencies</key>
+	<array>
+		<string>com.onecrayon.sugar.shellactions</string>
+	</array>
 	<!--No need to modify these values-->
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
 </dict>
 </plist>
