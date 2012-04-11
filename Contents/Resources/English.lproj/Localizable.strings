@@ -5,4 +5,5 @@
 "com.peteschaffner.sugar.shellac.run-in-terminal.title" = "Run";
 
 "shellac.actions.text.title" = "Shellac";
-"com.peteschaffner.sugar.shellac.convert-color.title" = "Change Color Format";
+"com.peteschaffner.sugar.shellac.convert-color.next.title" = "Next Color Format";
+"com.peteschaffner.sugar.shellac.convert-color.previous.title" = "Previous Color Format";

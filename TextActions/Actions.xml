@@ -21,32 +21,24 @@
 	</action>
 	
 	<!--Quickly cycle through different color strings (Hex/RGB/RGBA/HSL/HSLA)-->
-	<action id="com.peteschaffner.sugar.shellac.convert-color" category="shellac.actions.text">
+	<action id="com.peteschaffner.sugar.shellac.convert-color.next" category="shellac.actions.text">
 		<script>convert_color.js</script>
+		<language-context>js</language-context>
 		<key-equivalent>option cmd j</key-equivalent>
+		<setup>
+			<direction>next</direction>
+		</setup>
 	</action>
 	
-	<!--TODO: on hold for fix-->
-	<!-- Auto wrap or auto pair braces -->
-	<!--<action id="com.peteschaffner.sugar.shellac.auto-wrap.brace.round" category="hidden">
-		<class>OCShellAction</class>
-		<text-trigger key-equivalent="("></text-trigger>
+	<action id="com.peteschaffner.sugar.shellac.convert-color.previous" category="shellac.actions.text">
+		<script>convert_color.js</script>
+		<language-context>js</language-context>
+		<key-equivalent>option cmd k</key-equivalent>
 		<setup>
-			<script>auto-wrap.rb</script>
-			<input>selection</input>
-			<output>console</output>
-			<!--debugging--*>
-			<suppress-errors>false</suppress-errors>
+			<direction>previous</direction>
 		</setup>
-	</action>-->
+	</action>
 	
-	<!--<action id="com.peteschaffner.sugar.shellac.no-dupes.brace.round" category="hidden">
-		<script>no-dupes.js</script>
-		<text-trigger key-equivalent=")"></text-trigger>
-		<syntax-context>js punctuation.brace.round.close</syntax-context>
-		<setup>
-			<character>)</character>
-		</setup>
-	</action>-->
+	<!--TODO: Auto wrap or auto pair braces (on hold for fix)-->
 	
 </action-recipes>
