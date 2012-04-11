@@ -228,7 +228,7 @@ IndyArmy Network, Inc.
 				},
 				{
 					re: /^([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/,
-					example: [ "#00ff00", "336699" ],
+					example: [ "#336699", "336699" ],
 					process: function ( bits ) {
 						return [
 							parseInt( bits[ 1 ], 16 ),
@@ -289,7 +289,10 @@ IndyArmy Network, Inc.
 					retcolor = "rgb(" + r + "," + g + "," + b + ")";
 					break;
 				case "hex":
-					retcolor = "#" + r.toString( 16 ) + g.toString( 16 ) + b.toString( 16 );
+					r = (r.toString(16) < 16) ? '' + r + r : r.toString(16);
+					g = (g.toString(16) < 16) ? '' + g + g : g.toString(16);
+					b = (b.toString(16) < 16) ? '' + b + b : b.toString(16);
+					retcolor = "#" + r + g + b;
 					break;
 				case "hsl":
 					hsl = rgbToHsl( { "r" : r, "g" : g, "b" : b } );
@@ -297,7 +300,7 @@ IndyArmy Network, Inc.
 					break;
 				case "hsla":
 					hsl = rgbToHsl( { "r" : r, "g" : g, "b" : b, "a" : a } );
-					retcolor = "hsl(" + hsl.h + "," + hsl.s + "%," + hsl.l + "%," + hsl.a + ")";
+					retcolor = "hsla(" + hsl.h + "," + hsl.s + "%," + hsl.l + "%," + hsl.a + ")";
 					break;
 				case "hsv":
 					hsv = rgbToHsv( { "r" : r, "g" : g, "b" : b } );
@@ -323,9 +326,9 @@ IndyArmy Network, Inc.
 			} else {
 				q = hsl.l < 0.5 ? hsl.l * ( 1 + hsl.s ) : hsl.l + hsl.s - hsl.l * hsl.s;
 				p = 2 * hsl.l - q;
-				rgba.r = parseInt( ( hueToRgb( p, q, hsl.h + 1 / 3 ) * 256 ).toFixed( 0 ), 10 );
-				rgba.g = parseInt( ( hueToRgb( p, q, hsl.h ) * 256 ).toFixed( 0 ), 10 );
-				rgba.b = parseInt( ( hueToRgb( p, q, hsl.h - 1 / 3 ) * 256 ).toFixed( 0 ), 10 );
+				rgba.r = hueToRgb( p, q, hsl.h + 1 / 3 ) * 255;
+				rgba.g = hueToRgb( p, q, hsl.h ) * 255;
+				rgba.b = hueToRgb( p, q, hsl.h - 1 / 3 ) * 255;
 				rgba.a = hsl.a;
 			}
 			return rgba;
