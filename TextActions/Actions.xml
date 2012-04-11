@@ -23,7 +23,6 @@
 	<!--Quickly cycle through different color strings (Hex/RGB/RGBA/HSL/HSLA)-->
 	<action id="com.peteschaffner.sugar.shellac.convert-color.next" category="shellac.actions.text">
 		<script>convert_color.js</script>
-		<language-context>js</language-context>
 		<key-equivalent>option cmd j</key-equivalent>
 		<setup>
 			<direction>next</direction>
@@ -32,7 +31,6 @@
 	
 	<action id="com.peteschaffner.sugar.shellac.convert-color.previous" category="shellac.actions.text">
 		<script>convert_color.js</script>
-		<language-context>js</language-context>
 		<key-equivalent>option cmd k</key-equivalent>
 		<setup>
 			<direction>previous</direction>
